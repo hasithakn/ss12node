@@ -29,7 +29,7 @@ client.on('message', function (topic, message) {
     var foodStatus = jsonData.foodStatus;
     var compartment_id = jsonData.compartment_id;
 
-    sequelize.query("INSERT INTO devicedata (time_stamp,temp,humid,food_status,compartment_id) VALUES (" + timeStamp + ", " + temp + ", " + humid + "," + foodStatus + ",\"" + compartment_id + "\" )", function (err) {
+    sequelize.query("INSERT INTO deviceData (time_stamp,temp,humid,food_status,compartment_id) VALUES (" + timeStamp + ", " + temp + ", " + humid + "," + foodStatus + ",\"" + compartment_id + "\" )", function (err) {
         if (err) {
             console.log("error");
         } else {

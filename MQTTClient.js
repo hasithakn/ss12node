@@ -8,11 +8,11 @@ var options = {
     //username: 'virtual',
     //password: 'virtual'
 };
-var client = mqtt.connect('mqtt://localhost:1883', options);
+var client = mqtt.connect('mqtt://45.55.91.141:1883', options);
 // var client = mqtt.connect('mqtt://broker.hivemq.com:1883', options);
 
 client.on('connect', function () {
-    // client.subscribe('data');
+    client.subscribe('ss12-tech');
 });
 
 setInterval(function () {
